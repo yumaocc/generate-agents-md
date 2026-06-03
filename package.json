@@ -1,0 +1,24 @@
+{
+  "name": "generate-agents-md",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Install the generate-agents-md Codex skill.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "generate-agents-md": "./scripts/install.mjs"
+  },
+  "files": [
+    "scripts/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "codex",
+    "skill",
+    "agents.md",
+    "ai-coding",
+    "developer-tools"
+  ]
+}
