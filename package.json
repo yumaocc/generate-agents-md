@@ -2,7 +2,7 @@
   "name": "generate-agents-md",
   "version": "0.1.0",
   "private": false,
-  "description": "Install the generate-agents-md AI agent instruction workflow.",
+  "description": "Install the generate-agents-md skill for Codex or Claude Code.",
   "license": "MIT",
   "type": "module",
   "bin": {
@@ -16,6 +16,7 @@
   ],
   "keywords": [
     "codex",
+    "claude-code",
     "skill",
     "agents.md",
     "ai-agent",
