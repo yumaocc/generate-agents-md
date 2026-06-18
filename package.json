@@ -2,7 +2,7 @@
   "name": "generate-agents-md",
   "version": "0.1.1",
   "private": false,
-  "description": "Install the generate-agents-md skill for Codex or Claude Code.",
+  "description": "Install a Codex skill that generates team-shared AGENTS.md and .agents/rules files.",
   "license": "MIT",
   "type": "module",
   "bin": {
@@ -16,7 +16,6 @@
   ],
   "keywords": [
     "codex",
-    "claude-code",
     "skill",
     "agents.md",
     "ai-agent",

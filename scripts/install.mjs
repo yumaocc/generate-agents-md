@@ -32,12 +32,10 @@ function readTarget() {
 
 function printHelp() {
   console.log(`Usage:
-  generate-agents-md [--target codex|claude-code|both]
+  generate-agents-md [--target codex]
 
 Targets:
   codex        Install to $CODEX_HOME/skills or ~/.codex/skills
-  claude-code  Install to ~/.claude/skills
-  both         Install to both locations
 `);
 }
 
@@ -57,20 +55,13 @@ if (!existsSync(sourceDir)) {
 const target = readTarget();
 const codexHome = process.env.CODEX_HOME || join(homedir(), '.codex');
 const codexTarget = join(codexHome, 'skills', skillName);
-const claudeTarget = join(homedir(), '.claude', 'skills', skillName);
 
-if (!['codex', 'claude-code', 'both'].includes(target)) {
+if (target !== 'codex') {
   console.error(`Unknown target: ${target}`);
   printHelp();
   process.exit(1);
 }
 
-if (target === 'codex' || target === 'both') {
-  installTo(codexTarget);
-}
+installTo(codexTarget);
 
-if (target === 'claude-code' || target === 'both') {
-  installTo(claudeTarget);
-}
-
-console.log(target === 'claude-code' ? 'Restart Claude Code to pick up the new skill.' : 'Restart Codex or Claude Code to pick up the new skill.');
+console.log('Restart Codex to pick up the new skill.');
